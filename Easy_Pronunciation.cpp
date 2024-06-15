@@ -28,13 +28,10 @@ int main()
                     break;
                 }
             }
-            else
-                cont = 0;
+            else cont = 0;
         }
-        if (!f)
-            cout << "YES\n";
-        else
-            cout << "NO\n";
+        if (!f) cout << "YES\n";
+        else cout << "NO\n";
     }
 
     return 0;
