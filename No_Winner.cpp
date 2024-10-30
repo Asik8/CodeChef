@@ -13,10 +13,23 @@ int main() {
     ll t;
     cin >> t;
     while (t--) {
-        ll n;
-        cin >> n;
-        vector <ll> v(n);
-        for (auto& x:v) cin >>x;       
+        // vector <ll> v(3);
+        // for (auto& x:v) cin >>x; 
+        // ll m;
+        // cin>>m;
+        // while(m--)
+        // {
+        //     sort(v.begin(),v.end());
+        //     v[0]++;
+        // }      
+        // if(v[0] == v[1] || v[0] == v[2] || v[1] == v[2])py
+        // else pn
+        int a,b,c,d;
+        cin>>a>>b>>c>>d;
+        if(a+d == b || a+d == c || b == c) py
+        else if(b+d == a || b+d == c || a == c) py
+        else if(c+d == a || c+d == b || a == b)py
+        else pn
     }
     return 0;
 }
