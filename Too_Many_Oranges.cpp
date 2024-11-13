@@ -14,9 +14,9 @@ int main() {
     ll t;
     cin >> t;
     while (t--) {
-        ll n,k;
-        cin >> n>>k;
-        if(k>=(n*10) && k<=(n*12)) py
+        ll n,l;
+        cin >> n>>l;
+        if(l>=(n*10) && l<=(n*12)) py
         else pn
     }
     return 0;
