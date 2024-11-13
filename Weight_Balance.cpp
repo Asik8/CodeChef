@@ -16,8 +16,10 @@ int main() {
     while (t--) {
         ll w1,w2,x1,x2,m;
         cin>>w1>>w2>>x1>>x2>>m;   
-        ll a=(w2-w1)/m;
-        if(a<x1 || a>x2) cout<<"0\n";    
+        ll a=(m*x1);
+        ll b=(m*x2);
+        ll x=w2-w1;
+        if(a>x || b<x) cout<<"0\n";    
         else cout<<"1\n";    
     }
     return 0;
