@@ -19,10 +19,13 @@ int main() {
         vector <ll> v(n);
         for (auto& x:v) cin >>x; 
         ll c=0;
-        if(v[0]==1) c+=2; else c++;
-        if(v[1]==0) c+=2; else c++;  
-        for(int i=2;i<n;i++){
-            if(v[i]==)
+        bool f0=false,f1=false;
+        for(int i=0;i<n;i++){
+            if(v[i]==1 && !f1) f1=true;
+            else if(v[i]==0 && !f0) f0=true;
+            if(v[i]==1&& i!=1 && f0) c+=2;
+            else if(v[i]==0 && i!=0 && f1) c+=2;
+            else c++;
         }
         cout<<c<<endl;   
     }
