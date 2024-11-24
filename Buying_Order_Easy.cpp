@@ -14,20 +14,16 @@ int main() {
     ll t;
     cin >> t;
     while (t--) {
-        ll n;
+        ll n,c1=0,c2=0;
         cin >> n;
-        vector <ll> v(n);
-        for (auto& x:v) cin >>x; 
-        ll c=0;
-        bool f0=false,f1=false;
-        for(int i=0;i<n;i++){
-            if(v[i]==1 && !f1) f1=true;
-            else if(v[i]==0 && !f0) f0=true;
-            if(v[i]==1&& i!=1 && f0) c+=2;
-            else if(v[i]==0 && i!=0 && f1) c+=2;
-            else c++;
-        }
-        cout<<c<<endl;   
+        forni{
+            ll x;
+            cin>>x;
+            if(i==n-1 && x==1) c1++;
+            if(i==0 && x==0) c2++;
+        }  
+        if(c1&c2) cout<<2*n-2<<endl;
+        else cout<<2*n-1<<endl;
     }
     return 0;
 }
