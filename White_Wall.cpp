@@ -20,23 +20,25 @@ using namespace std;
 #define sz(x) x.size()
 #define vec(x) vector<x>
 
+auto ch(const string &s,vector<char> &v){
+    ll c=0;
+    f(i,0,sz(s)){
+        if(s[i]!=v[i%3]) c++;
+    }
+    return c;
+}
+
 void asikM(){
     ll n;
     cin >> n;
     string s;
     cin>>s;
-    map<char,ll>m;
-    ll l=0,r=0,c=LLONG_MAX;
-    while(r<n){
-        m[s[r]]++;
-        if((r-l+1) == 3){
-            ll x=3-min({m['R'],m['G'],m['B']});
-            c=min(c,x);
-            m[s[l]]--;
-            l++;
-        }
-        r++;
-    }
+    ll c=n;
+    vec(char) v={'R','G','B'};
+    sort(all(v));
+    do{
+        c=min(c,ch(s,v));
+    } while(next_permutation(all(v)));
     co(c)
 }
 
