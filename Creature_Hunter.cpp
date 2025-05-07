@@ -26,21 +26,19 @@ void asikM(){
     cin >> n>>k;
     vector <pi> v(n);
     for (auto& x:v) cin>>x.first>>x.second;
-    sort(all(v));
     ll m1=0,m2=0;
     forni{
         if(v[i].first==1) m1=max(m1,v[i].second);
-        else m2=max(m2,v[i].second);
+        else if(v[i].first==2) m2=max(m2,v[i].second);
     }
-    ll t1=((k+(m1-1))/m1),t2=((k+(m2-1))/m2)*2,t2=0,ts=0,tf=0;
-    if(m1<=m2){ tf=2; ts=1;}
-    else { tf=1; ts=2;}
-    while(k){
-        c=k/max(m1,m2);
-        k-=(c*max(m1,m2));
-        c*=tf;
-        if()
-    }
+    ll t1=(m1>0)?(k+m1-1)/m1:LLONG_MAX;
+    ll t2=(m2>0)?((k+m2-1)/m2)*2:LLONG_MAX;
+    ll mx=max(m1,m2);
+    ll hits=k/mx;
+    ll t3=hits*((mx==m1)?1:2);
+    hits=k%mx;
+    if(hits>0) t3+=((hits<=m1)?1:2);
+    co(min(min(t1,t2),t3))
 }
 
 int main() {
