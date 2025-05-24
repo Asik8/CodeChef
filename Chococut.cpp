@@ -24,17 +24,26 @@ using namespace std;
 void asikM(){
     ll n,m,k;
     cin >> n>>m>>k;
-    ll l=(k+(n-1))/n,r=(k+(m-1))/m;
-    cout<<l<<" "<<r<<el
-    if(l==r){
-        ll x=(n-l);
-        x*=m;
-        ll y=(m-r);
-        y*=n;
-        co(max(x,y))
-    } else if(l<r){
-        
+    ll ans=INT_MIN;
+    if(k==0){
+        co(n*m)
+        return;
     }
+    fl(i,1,m+1){
+        ll d=n*i;
+        if(d>=k){
+            ll rem=(m*n)-d;
+            ans=max(ans,rem);
+        }
+    }
+    fl(i,1,n+1){
+        ll d=m*i;
+        if(d>=k){
+            ll rem=(m*n)-d;
+            ans=max(ans,rem);
+        }
+    }
+    co(ans)
 }
 
 int main() {
