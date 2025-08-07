@@ -25,7 +25,13 @@ void asikM(){
     ll n;
     cin >> n;
     vector <ll> v(n);
-    for (auto& x:v) cin >>x; 
+    for (auto& x:v) cin >>x;
+    ll c=0,s=v[0];
+    fl(i,1,n){
+        c+=abs(s);
+        s+=v[i];
+    }
+    co(c)
 }
 
 int main() {
