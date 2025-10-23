@@ -24,27 +24,16 @@ using namespace std;
 #define vec(x) vector<x>
 
 void asikM(){
-    ll n,c;
-    cin>>n>>c;
-    vector<ll>b(n),d(n),cost(n,0);
-    for(auto& x:b)cin>>x; 
-    for(auto& x:d)cin>>x; 
-    forni{
-        if(i==0) cost[i]=(b[i]*d[i]);
-        else{
-            ll o1=b[i]*d[i];
-            ll o2=(c*i)+(b[0]*d[i]);
-            cost[i]=o1-o2;
-        }
-    }
-    flx(cost)
+    ll n;
+    cin>>n;
+    if(n<5) py else pn
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
     ll t=1;
-    cin>>t;
+    // cin>>t;
     while(t--)
     asikM();      
     return 0;
